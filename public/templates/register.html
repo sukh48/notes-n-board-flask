@@ -1,0 +1,12 @@
+<script type="text/x-handlebars" id="createaccount">
+  <form class="form-signin" role="form" id="register-form">
+    <h2 class="form-signin-heading">Create an Account</h2>
+    <p>Name: <font color="black">{{input type="text" value=name id="new-name-field"}}</font></p>
+	<p>Email: <font color="black">{{input type="email" value=email id="new-email-field"}}</font></p>
+	<p>Password <font colot="black">{{input type="password" value=password id="new-password-field"}}</font></p>
+	<button class="btn btn-lg btn-primary btn-block" {{action 'add' name email password}} id="register-button">
+	   Create Account
+	</button>
+	<p id="badInput"></p>
+  </form>
+</script>

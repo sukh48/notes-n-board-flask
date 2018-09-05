@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://dev3.notes-n-things.tk/" />
+<title>RegisterAndCreateCourse</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">RegisterAndCreateCourse</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/index.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=courses-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=create-course-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=course-name-field</td>
+	<td>Test 101</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alt_name-field</td>
+	<td>This is test data</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=create-course-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=coursesMsg</td>
+	<td>Guests can not create a course</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=login-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email-field</td>
+	<td>testcase@testcase.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password-field</td>
+	<td>testing</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=login-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=wrongInput</td>
+	<td>Wrong Email or Password was entered</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=register-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new-name-field</td>
+	<td>Tester</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new-email-field</td>
+	<td>testcase@testcase.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new-password-field</td>
+	<td>testing</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=register-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=badInput</td>
+	<td>Successfully created user</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=login-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email-field</td>
+	<td>testcase@testcase.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password-field</td>
+	<td>testing</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=login-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=currUser</td>
+	<td>User: Tester</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=courses-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=create-course-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=course-name-field</td>
+	<td>Testing Testing</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alt_name-field</td>
+	<td>This is a test</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=create-course-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyNotText</td>
+	<td>id=coursesMsg</td>
+	<td>Successfully added course</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=course-name-field</td>
+	<td>Test 101</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alt_name-field</td>
+	<td>This is test data</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=create-course-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=coursesMsg</td>
+	<td>Successfully added course</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=logout-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=sign-out-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=signout</td>
+	<td>You have successfully signed out</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<script type="text/x-handlebars" id="users">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar" id="users-sidebar">
+        {{#each}}
+        <li>{{#link-to 'user' this.id}}{{username}}{{/link-to}}</li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <h1 class="page-header" id="users-header">Users</h1>
+      {{outlet}}
+    </div>
+  </div>
+</script>
+
+<script type="text/x-handlebars" id="user">
+  {{#if isEditing}}
+    {{partial 'user/edit'}}
+    <button {{action 'doneEditing'}} id="done-button">Done</button>
+    {{else}}
+    <button {{action 'edit'}} id="edit-button">Edit</button>
+  {{/if}}
+
+  <h1>username: {{username}}</h1>
+  <h2>email: {{email}}</h2>
+</script>
+
+<script type="text/x-handlebars" id="user/_edit">
+  <p><font color="black">{{input type="text" value=username id="user-edit-field"}}</font></p>
+</script>

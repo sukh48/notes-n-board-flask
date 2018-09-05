@@ -1,0 +1,11 @@
+<script type="text/x-handlebars" id="message">
+  <button class="btn btn-default" type="button" id="create-comment" {{action "addComment" commentTxt}}>
+    Post!
+    </button>
+  {{input type="text" value=commentTxt id="comment-field"}}
+  <br><br>
+  {{message}}
+  {{#each comments}}
+      <li>{{comment}}</li>
+  {{/each}}
+</script>

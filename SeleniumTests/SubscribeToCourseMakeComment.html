@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://dev3.notes-n-things.tk/" />
+<title>SubscribeToCourseMakeComment</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SubscribeToCourseMakeComment</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/index.html</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=login-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email-field</td>
+	<td>test@test.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password-field</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=login-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=courses-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ember622</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=subscribe-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=home-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ember671</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=message-field</td>
+	<td>testing 1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=create-message</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='ember401']/div[2]/div/div[2]/b[2]</td>
+	<td>testing 1</td>
+</tr>
+</tbody></table>
+</body>
+</html>

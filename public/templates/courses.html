@@ -1,0 +1,69 @@
+<script type="text/x-handlebars" id="courses">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar" id="courses-sidebar">
+      {{#each}}
+        <li>{{#link-to 'course' this.id}}{{name}}{{/link-to}}</li>
+      {{/each}}
+      <li id="addCourseBtn">{{#link-to 'courseadd' classNames="btn btn-lg btn-primary btn-block" id="create-course-button"}}Create Course{{/link-to}}</li>
+      </ul>
+    </div>
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <h1 class="page-header" id="courses-header">Courses</h1>
+      {{outlet}}
+    </div>
+  </div>
+</script>
+
+<script type="text/x-handlebars" id="course">
+  <button class="btn btn-lg btn-primary" id="subscribe-button" {{action 'subscribe'}}>
+  Subscribe
+  </button>
+  <br>
+  {{name}}
+</script>
+
+<script type="text/x-handlebars" id="courseadd">
+  <div id="course-container">
+    <p>Name: <font color="black">{{input type="text" value=name id="course-name-field"}}</font></p>
+    <p>Alt Name: <font color="black">{{input type="text" value=alt_name id="alt_name-field"}}</font></p>
+    <button class="btn btn-lg btn-primary" id="create-course-submit" {{action 'add' name alt_name}}>
+      Create Course
+    </button>
+    <p id="coursesMsg"></p>
+  </div>
+</script>
+
+<script type="text/x-handlebars" id="mycourse">
+    
+    <div class="col-sm-10">
+      {{input type="text" class="form-control" placeholder="title" value=titleTxt id="msgtitle-field"}} 
+      {{input type="text" class="form-control" placeholder="message" value=messageTxt id="message-field"}}
+    </div>
+    
+    <button class="btn btn-primary" type="button" id="create-message" {{action "addMessage" titleTxt messageTxt}}>
+    Post!
+    </button>
+   <p id="errorMsg"></p>
+    <br><br>
+
+  {{#each itemController="message"}}
+    <div class="jumbotron">
+      <h2>{{title}}</h2>
+      <h5>by {{user.username}}</h5>
+      <p>{{message}}</p>
+      <h4>Comments:</h4>
+      <ul class="list-group">
+      {{#each comments itemController="comment"}}
+        <li class="list-group-item">{{comment}}</li>
+      {{/each}}
+      </ul>
+      <br>
+      {{input class="form-control" type="text" value=commentTxt}}
+      <button class="btn btn-default" type="button" id="create-comment2" {{action "addComment" commentTxt}}>
+      add comment!
+      </button>
+    </div>
+  {{/each}}
+</script>

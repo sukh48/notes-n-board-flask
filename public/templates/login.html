@@ -1,0 +1,19 @@
+<script type="text/x-handlebars" id="login">
+  
+  <form class="form-signin" role="form" id="signin-form">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    {{input class="input-block-level" placeholder="Email address" type="email" value=email id="email-field"}}
+    {{input class="input-block-level" placeholder="Password" type="password" value=password id="password-field"}}
+    <label class="checkbox">
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+    <button class="btn btn-lg btn-primary btn-block"{{action 'login' email password}} id="login-button">Login</button>
+    {{#link-to 'createaccount' classNames="btn btn-lg btn-primary btn-block" id="create-account-button"}}Create Account{{/link-to}}
+    <br><br>
+    <div id="wrongInput" class="alert alert-success" style="display:NONE"></div>
+  </form>
+
+  <div>
+    {{outlet}} 
+  </div>
+</script>
